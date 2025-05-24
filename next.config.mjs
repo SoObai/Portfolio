@@ -79,38 +79,11 @@ const nextConfig = {
   // Enable gzip compression
   compress: true,
   
-  // Enable static exports for optimal performance and deployment flexibility
+  // Enable static exports for GitHub Pages
   output: 'export',
   
   // Configure URL trailing slash behavior
   trailingSlash: true,
-  
-  // Security headers configuration
-  headers: async () => {
-    return [
-      {
-        // Apply security headers to all routes
-        source: '/(.*)',
-        headers: [
-          {
-            // Prevent MIME type sniffing
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            // Prevent embedding in frames (clickjacking protection)
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            // Enable XSS protection in browsers
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-        ],
-      },
-    ]
-  },
 }
 
 // Merge user configuration if available
