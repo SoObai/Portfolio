@@ -22,6 +22,12 @@ const nextConfig = {
   // Enable React Strict Mode for additional development checks
   reactStrictMode: true,
   
+  // Configure base path for GitHub Pages
+  basePath: '/Portfolio',
+  
+  // Configure asset prefix for GitHub Pages
+  assetPrefix: '/Portfolio/',
+  
   // Image optimization configuration
   images: {
     // Disable built-in optimization for static export compatibility
@@ -77,7 +83,7 @@ const nextConfig = {
   output: 'export',
   
   // Configure URL trailing slash behavior
-  trailingSlash: false,
+  trailingSlash: true,
   
   // Security headers configuration
   headers: async () => {
